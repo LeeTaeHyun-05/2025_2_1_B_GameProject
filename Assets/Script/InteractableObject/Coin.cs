@@ -23,6 +23,8 @@ public class Coin : InteractableObject
         {
             QuestManager.instance.AddCollectProgress(questTag);
         }
+
+        AchievementManager.Instance?.UpdateProgress(AchievementType.CollectCoins, coinValue);
         Destroy(gameObject);
     }
     // Start is called before the first frame update
